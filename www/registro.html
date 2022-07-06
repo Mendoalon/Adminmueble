@@ -1,42 +1,59 @@
-<div class="page" data-name="registro">
+<div class="fondo-backgroup page" data-name="registro">
     <div class="page-content">
         <div class="block">
-            <h1>Registro</h1>
-            <div class="list no-hairlines-md">
-                <ul>
-                    <li class="item-content item-input">
-                        <div class="item-inner">
-                            <div class="item-title item-label">Email</div>
-                            <div class="item-input-wrap">
-                                <input type="email" id="regemail" placeholder="Ingrese su email" />
-                                <span class="input-clear-button"></span>
+
+            <div class="card container">
+                <div class="title-login">
+                    <h2>Crear una cuenta</h2>
+                </div>
+
+
+                <div class="list no-hairlines-md">
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Email</div>
+                                <div class="item-input-wrap">
+                                    <input type="email" id="regemail" placeholder="Ingrese su email" autocomplete="email" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="item-content item-input">
-                        <div class="item-inner">
-                            <div class="item-title item-label">Contraseña</div>
-                            <div class="item-input-wrap">
-                                <input type="password" id="regcontrasena" placeholder="Ingrese su contraseña" />
-                                <span class="input-clear-button"></span>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Contraseña</div>
+                                <div class="item-input-wrap">
+                                    <input type="password" id="regcontrasena" placeholder="Ingrese su contraseña" required/>
+                                    <span class="input-clear-button"></span>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Confirmar Contraseña</div>
+                                <div class="item-input-wrap">
+                                    <input type="password" id="reg-conf-contrasena"
+                                        placeholder="Ingrese su contraseña" required/>
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block" id="regMensaje"></div>
+
+                <div>
+                    <button class="col button button-fill button-round btn-login" id="regboton">Registrar</button>
+                </div>
+                <div class="login-p">
+                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                </div>
+                <div>
+                    <a href="/index/" class="col button button-fill button-round btn-login">Iniciar Sesión</a>
+                </div>
             </div>
-
-            <div class="block" id="regMensaje"></div>
-
-            <div>
-                <button class="col button button-raised button-fill" id="regboton">Registrar</button>
-            </div>
-
-            <h3>Si ya tenes usuario</h3>
-            <div>
-                <a href="/index/" class="col button button-raised button-fill">Login</a>
-            </div>
-
         </div>
     </div>
 </div>

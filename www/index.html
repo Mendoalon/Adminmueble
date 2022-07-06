@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="css/icons.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/app.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -43,64 +46,58 @@
         <div class="view view-main">
 
             <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="page">
+            <div data-name="index" class="fondo-backgroup page">
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
 
-                        <div class="container">
-                            <div class="card card-outline">
-                                <div class="card-header">
-                                    <h1>Login</h1>
-                                </div>
-                                <div class="card-content card-content-padding">
 
-                                    <div class="list no-hairlines-md">
-                                        <ul>
-                                            <li class="item-content item-input">
-                                                <div class="item-inner">
-                                                    <div class="item-title item-label">Email</div>
-                                                    <div class="item-input-wrap">
-                                                        <input type="email" id="logemail"
-                                                            placeholder="Ingrese su email" />
-                                                        <span class="input-clear-button"></span>
-                                                    </div>
-                                                </div>
-                                            </li>
+                        <div class="card container">
+                            <div class="title-login">
+                                <h2>Iniciar Sesion</h2>
+                            </div>
 
-                                            <li class="item-content item-input">
-                                                <div class="item-inner">
-                                                    <div class="item-title item-label">Contraseña</div>
-                                                    <div class="item-input-wrap">
-                                                        <input type="password" id="logcontrasena"
-                                                            placeholder="Ingrese su contraseña" />
-                                                        <span class="input-clear-button"></span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>
-                                    <div class="block" id="logMensaje"></div>
-                                    </p>
-                                    <div>
-                                        <p>
-                                            <button class="col button button-raised button-fill"
-                                                id="ingboton">Login</button>
-                                        </p>
-                                        <p>
-                                            <a href="/registro/"
-                                                class="col button button-raised button-fill">Registrarte</a>
-                                    </div>
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <h3>Si no tienes usuario</h3>
-                                </div>
+                            <div class="img-login">
+                                <img src="img/img-login.png" />
+                            </div>
+
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Email</div>
+                                            <div class="item-input-wrap">
+                                                <input type="email" id="logemail" placeholder="Ingrese su email" required/>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Contraseña</div>
+                                            <div class="item-input-wrap">
+                                                <input type="password" id="logcontrasena"
+                                                    placeholder="Ingrese su contraseña" required />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <button class="col button button-fill button-round btn-login" id="ingboton">Iniciar Sesión</button>
+                            </div>
+                            <div class="login-p">
+                            <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                            </div>
+                            <div>
+                                <a href="/registro/"
+                                    class="col button button-fill button-round btn-login">Registrar</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

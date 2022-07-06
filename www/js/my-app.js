@@ -47,9 +47,16 @@ $$(document).on('page:init', '.page[data-name="registro"]', function (e) {
 });
 
 function fnRegistrar(){
+  password1 = $$('#regcontrasena').val();
+  password2 = $$('#reg-conf-contrasena').val();
 
-  email = $$('#regemail').val();
-  password = $$('#regcontrasena').val();
+  if (password1 ==password2) {
+    password = $$('#regcontrasena').val();
+  }else{
+    console.log('La cotraseña no son iguales');
+  } 
+  email = $$('#regemail').val(); 
+  
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {

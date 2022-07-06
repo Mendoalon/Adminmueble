@@ -1,0 +1,58 @@
+:root {
+  --text-color: #18B9D1;
+}
+
+
+.fondo-backgroup {
+  min-height: 100vh;
+  background: url(../img/backgroup.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(52, 70, 106, 0.902);
+  height: 600px;
+  margin-top: 100px;
+  box-shadow: 0px 10px 10px #192746e6;
+}
+
+.title-login h2 {
+  color: var(--text-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.img-login img {
+  display: block;
+  width: 80px;
+  margin: 20px auto;
+}
+
+.item-inner .item-title {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list .item-input input{
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.btn-login {
+  margin: 0 auto;
+  width: 40%;
+  background: var(--text-color);
+}
+
+.login-p{
+  color: white;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: small;
+}
