@@ -15,22 +15,69 @@ var app = new Framework7({
     // Add default routes
     routes: [
       { path: '/index/', url: 'index.html',},
-      { path: '/registro/', url: 'registro.html',},  
+      { path: '/registro/', url: 'registro.html',}, 
+      { path: '/registro-datos/', url: 'registro-datos.html',}, 
       { path: '/panel-usuario/', url: 'panel-usuario.html',},
-      { path: '/about/', url: 'about.html', },
+      { path: '/about/', url: 'about.html', },  
     ]
+
     // ... other parameters
   });
 
 var mainView = app.views.create('.view-main');
 
+var db;
+var colPersonas;
+var rol = 'propietario';
+
+
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-    //  console.log("Device is ready!");
-
-  
+      console.log("Device is ready!");
+      
+      db = firebase.firestore();
+      colPersonas = db.collection('Usuarios');
+      //sembrado();
 
 });
+
+
+//function sembrado(){
+  /* 
+  console.log('Iniciando el sembrado de datos');
+  var data ={nombre: 'Luis', apellido: 'Mendoza', rol:'admin'};
+  elId = 'luis.mendoza0321@gmail.com';
+  clave = 'admin1';
+  firebase.auth().createUserWithEmailAndPassword(elId, clave)
+  .then( function (){
+
+  colUsuarios.doc(elId).set(data)
+  .then(function(ok){ console.log('ok: ' + ok)})
+  .catch(function(error){console.log(error)})
+
+})
+.catch(function(error){console.log(error)})
+*/
+//}
+
+
+
+//   db.collection('persona').add(data)
+//   .then(function(datosPersona){
+
+//     console.log(`Los datos guardados ok ${datosPersona.id}`);
+//   })
+
+
+//   .catch(function(error){
+//     console.log(error);
+//   })
+  
+
+//   console.log('fin del sembrado de datos');
+// };
+
+
 
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
@@ -39,107 +86,5 @@ $$(document).on('page:init', function (e) {
     // console.log(e);   
 
 });
-
-
-
-$$(document).on('page:init', '.page[data-name="registro"]', function (e) {
-  $$('#regboton').on('click', fnRegistrar);
-});
-
-function fnRegistrar(){
-  password1 = $$('#regcontrasena').val();
-  password2 = $$('#reg-conf-contrasena').val();
-
-  if (password1 ==password2) {
-    password = $$('#regcontrasena').val();
-  }else{
-    console.log('La cotraseña no son iguales');
-  } 
-  email = $$('#regemail').val(); 
-  
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-
-    $$('#regMensaje').html('Su registro es correcto');
-
-    mainView.router.navigate('/index/')
-
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    // ..
-
-    switch(errorCode){
-      case 'auth/weak-password': mensaje = 'La clave es muy devil';
-      break
-
-      case 'auth/email-already-in-use': mensaje = 'El correo ya se encuentra registrado';
-      break
-
-      default: mensaje = 'Intente de nuevo';
-
-    }
-    
-    $$('#regMensaje').html(`Hay un error: ${mensaje}`);
-
-  });
-  
-
-}
-
-
-
-
-// Option 2. Using live 'page:init' event handlers for each page
-$$(document).on('page:init', '.page[data-name="index"]', function (e) {
-  $$('#ingboton').on('click', fnLogin); 
-});
-
-
-function fnLogin(){
-
-  email = $$('#logemail').val();
-  password = $$('#logcontrasena').val();
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-    $$('#logMensaje').html('Su registro es correcto');
-
-    mainView.router.navigate('/panel-usuario/');
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-
-    console.log(errorCode);
-    console.log(errorMessage);
-
-    switch(errorCode){
-      case 'auth/wrong-password': mensaje = 'La clave es incorrecta';
-      break
-
-      case 'auth/user-not-found': mensaje = 'El correo es invalido';
-      break
-
-      default: mensaje = 'Intente de nuevo';
-
-    }
-    
-    $$('#logMensaje').html(`Hay un error: ${mensaje}`);
-  });
-}
-
-
-
 
 

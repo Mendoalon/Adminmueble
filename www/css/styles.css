@@ -50,6 +50,11 @@
   background: var(--text-color);
 }
 
+.btn-login-fin{
+  margin: 0 auto;
+  width: 60%;
+  background: var(--text-color);
+}
 .login-p{
   color: white;
   margin: 0 auto;
