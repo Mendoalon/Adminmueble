@@ -22,10 +22,6 @@ function fnLogin(){
     var errorCode = error.code;
     var errorMessage = error.message;
 
-
-    console.log(errorCode);
-    console.log(errorMessage);
-
     switch(errorCode){
       case 'auth/wrong-password': mensaje = 'La clave es incorrecta';
       break

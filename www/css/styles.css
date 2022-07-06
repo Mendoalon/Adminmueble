@@ -6,7 +6,7 @@
 .fondo-backgroup {
   min-height: 100vh;
   background: url(../img/backgroup.jpg) no-repeat center;
-  background-size: cover;
+  background-size:  100vh 100% ;
 }
 
 .container {
