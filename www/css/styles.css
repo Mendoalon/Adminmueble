@@ -4,9 +4,13 @@
 
 
 .fondo-backgroup {
-  min-height: 100vh;
+  height: 100vh;
   background: url(../img/backgroup.jpg) no-repeat center;
   background-size:  100vh 100% ;
+}
+.nav{
+  background-color: #35466B;
+  color: var(--text-color);
 }
 
 .container {
@@ -15,7 +19,6 @@
   justify-content: center;
   background: rgba(52, 70, 106, 0.902);
   height: 600px;
-  margin-top: 100px;
   box-shadow: 0px 10px 10px #192746e6;
 }
 
@@ -45,7 +48,7 @@
 
 
 .btn-login {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 40%;
   background: var(--text-color);
 }
