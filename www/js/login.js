@@ -3,6 +3,7 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
   $$('#ingboton').on('click', fnLogin); 
 });
 
+var nombreUsuario, apellidoUsuario, direccionUsuario, identificacionUsuario, rolUsuario,telefonoUsuario;
 
 function fnLogin(){
 
@@ -14,9 +15,39 @@ function fnLogin(){
     // Signed in
     var user = userCredential.user;
     // ...
-    $$('#logMensaje').html('Su registro es correcto');
+    $$('#logMensaje').html('Bienvenido a Adminmuebles');
 
-    mainView.router.navigate('/panel-usuario/');
+
+    //validacion para verificar si el usuario es admin, propietario o inquilino.
+    var docRef = colUsuarios.doc(email);
+
+docRef.get().then((doc) => {
+    if (doc.exists) {
+        //console.log("Document data:", doc.data());
+      
+        nombreUsuario = doc.data().nombre;
+        apellidoUsuario = doc.data().apellido;
+        direccionUsuario = doc.data().direccion;
+        identificacionUsuario = doc.data().identificacion;
+        rolUsuario = doc.data().rol;
+        telefonoUsuario= doc.data().telefono;
+
+      if(rolUsuario == "admin"){
+        mainView.router.navigate('/panel-admin/');
+      }else if(rolUsuario == "propietario"){
+        mainView.router.navigate('/panel-propietario/');
+      }else{
+        mainView.router.navigate('/panel-inquilino/');
+      }
+
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
   })
   .catch((error) => {
     var errorCode = error.code;

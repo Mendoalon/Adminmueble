@@ -16,8 +16,10 @@ var app = new Framework7({
     routes: [
       { path: '/index/', url: 'index.html',},
       { path: '/registro/', url: 'registro.html',}, 
-      { path: '/registro-datos/', url: 'registro-datos.html',}, 
-      { path: '/panel-usuario/', url: 'panel-usuario.html',},
+      { path: '/registro-datos/', url: 'registro-datos.html',},
+      { path: '/panel-admin/', url: 'panel-admin.html',}, 
+      { path: '/panel-propietario/', url: 'panel-propietario.html',},
+      { path: '/panel-inquilino/', url: 'panel-inquilino.html',},
       { path: '/about/', url: 'about.html', },  
     ]
 
@@ -27,7 +29,7 @@ var app = new Framework7({
 var mainView = app.views.create('.view-main');
 
 var db;
-var colPersonas;
+var colUsuarios;
 var rol = 'propietario';
 
 
@@ -36,7 +38,7 @@ $$(document).on('deviceready', function() {
       console.log("Device is ready!");
       
       db = firebase.firestore();
-      colPersonas = db.collection('Usuarios');
+      colUsuarios = db.collection('Usuarios');
       //sembrado();
 
 });

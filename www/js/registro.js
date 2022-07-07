@@ -75,10 +75,10 @@ function fnRegistrofin() {
     rol: rol
   }
 
-  colPersonas.doc(elId).set(datos)
-    .then(function (ok) { console.log(`Registro de usuario ok: ${ok}`) })
+  colUsuarios.doc(elId).set(datos)
+    .then(function (ok) { console.log(`Registro de usuario ok: ${ok}`) });
   mainView.router.navigate('/panel-usuario/')
-    .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) })
+    .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
 
 }
 
