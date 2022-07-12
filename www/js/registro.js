@@ -1,6 +1,6 @@
 $$(document).on('page:init', '.page[data-name="registro"]', function (e) {
-  $$('#regboton').on('click', fnRegistrar);
-});
+  $$('#regboton').on('click', fnRegistrar)
+})
 
 function fnRegistrar() {
   password1 = $$('#regcontrasena').val();
@@ -8,10 +8,11 @@ function fnRegistrar() {
 
   if (password1 == password2) {
     password = $$('#regcontrasena').val();
+    email = $$('#regemail').val();
   } else {
     console.log('La cotraseña no son iguales');
   }
-  email = $$('#regemail').val();
+
 
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -76,8 +77,8 @@ function fnRegistrofin() {
   }
 
   colUsuarios.doc(elId).set(datos)
-    .then(function (ok) { console.log(`Registro de usuario ok: ${ok}`) });
-  mainView.router.navigate('/panel-usuario/')
+    .then(function (ok) { console.log('Registro de usuario ok:' ) });
+  mainView.router.navigate('/panel-propietario/')
     .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
 
 }

@@ -14,8 +14,8 @@ function fnLogin(){
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    // ...
-    $$('#logMensaje').html('Bienvenido a Adminmuebles');
+
+    
 
 
     //validacion para verificar si el usuario es admin, propietario o inquilino.
