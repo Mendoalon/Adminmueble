@@ -1,0 +1,103 @@
+<div class="fondo-backgroup page" data-name="registro-inmuebles">
+    <div class="page-content">
+
+
+        <button  class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear
+            Inmueble</button>
+
+        <div class="card card-outline">
+            <div class="card-header">Card header</div>
+            <div class="card-content card-content-padding">Card with header and footer. Card headers are used to display
+                card titles and footers for additional information or just for custom actions.</div>
+            <div class="card-footer">Card Footer</div>
+        </div>
+
+
+        <div class="fondo-backgroup popup popup-about">
+            <div class="block">
+                <div class="card">
+                    <div class="title-login">
+                        <h2>Crear Inmueble</h2>
+                    </div>
+
+                    <div class="list no-hairlines-md">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Tipo</div>
+                                    <div class="item-input-wrap">
+                                        <input class="imputImueble" type="text" id="tipoInmueble" placeholder="Ingrese Tipo" required
+                                            validate />
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Direccion</div>
+                                    <div class="item-input-wrap">
+                                        <input class="imputImueble" type="text" id="dirInmueble" placeholder="Ingrese Direccion" required
+                                            validate />
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Matricula</div>
+                                    <div class="item-input-wrap">
+                                        <input class="imputImueble" type="text" id="matriInmueble" placeholder="Ingrese matricula" required
+                                            validate />
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Estado</div>
+                                    <div class="item-input-wrap nput-dropdown-wrap">
+                                        <select placeholder="Please choose..." id="estadoImueble">
+                                            <option value="Diponible">Diponible</option>
+                                            <option value="Ocupada">Ocupada</option>
+                                            <option value="Mantenimiento">Mantenimiento</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </li> 
+
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Email Propietario</div>
+                                    <div class="item-input-wrap">
+                                        <input class="imputImueble" type="email" id="emailPropie" placeholder="Ingrese Email Propietario"
+                                            required validate />
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Email Inquilino</div>
+                                    <div class="item-input-wrap">
+                                        <input class="imputImueble" type="email" id="emailInqui" placeholder="Ingrese Email Inquilino"
+                                            required validate />
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                        </ul>
+
+                        <div class="row">
+                            <button class="col button button-fill button-round btn-login"
+                            id="btncrearinmueble">Crear</button>
+                            <button class="col button button-fill button-round btn-login popup-close">Cerrar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

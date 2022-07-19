@@ -1,28 +1,34 @@
 // Option 2. Using live 'page:init' event handlers for each page
-$$(document).on('page:init', '.page[data-name="panel-propietario]', function (e) {
-
-  // si es propietario => mostrar los datos del propietario.
-  direccionUsuario, identificacionUsuario, telefonoUsuario;
-
-
-  datosCard = `
-  <div class="card">
-        <div class="card-header">${nombreUsuario} ${apellidoUsuario}</div>
-          <div class="card-content card-content-padding">
-            <div class="row">
-              <div class="col-100">${direccionUsuario}</div>
-              <div class="col-50">${identificacionUsuario}</div>
-              <div class="col-50">${telefonoUsuario}</div>
-            </div>
-          </div>
-        <div class="card-footer">ROL: ${rolUsuario}</div>
-      </div>
-      `;
+$$(document).on('page:init', '.page[data-name="registro-inmuebles"]', function (e) {
+  $$('#btncrearinmueble').on('click', crearInmueble)
+})
 
 
-  
-  $$('#datosCard').html(datosCard);
+function crearInmueble() {
+   
+console.log('entrando a la funcion');
 
+  let IdInmueble = matricula = $$('#matriInmueble').val();
+
+  const datosInmueble = {
+    tipo : $$('#tipoInmueble').val(),
+    direccion : $$('#dirInmueble').val(),
+   matricula : $$('#matriInmueble').val(),
+   estado : $$('#estadoImueble').val(),
+    email_propietario : $$('#emailPropie').val(),
+    email_inquilino : $$('#emailInqui').val()
+  }
+ 
+
+   db.collection("Inmuebles").doc(IdInmueble).set(datosInmueble)
+.then(() => {
+    console.log("Document successfully written!");
+})
+.catch((error) => {
+    console.error("Error writing document: ", error);
 });
 
-console.log(datosCard);
+
+
+}
+

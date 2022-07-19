@@ -53,16 +53,27 @@
                 </div>
             </div>
 
-            <div class="toolbar toolbar-bottom">
-                <div class="toolbar-inner">
+            <div class="herramientas toolbar toolbar-bottom">
+                <div class="herramientas toolbar-inner">
                     <!-- Toolbar links -->
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
+                    <a href="/panel-propietario/" class="link color-white"><span class="material-icons ">
+                            home
+                        </span></a>
+                    <a href="/index/" class="link color-white"><span class="material-icons">
+                            account_circle
+                        </span></a>
+                    <a href="/registro-inmuebles/" class="link color-white"><span class="material-icons">
+                            business
+                        </span>
+                    </a>
+                    <a href="/registro-inquilino/" class="link color-white"><span class="material-icons">
+                            people
+                        </span></a>
                 </div>
             </div>
 
             <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="fondo-backgroup page no-toolbar">
+            <div data-name="index" class="fondo-backgroup page">
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
@@ -83,7 +94,8 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Email</div>
                                             <div class="item-input-wrap">
-                                                <input type="email" id="logemail" placeholder="Ingrese su email" value="cc@cc.com" required validate/>
+                                                <input type="email" id="logemail" placeholder="Ingrese su email"
+                                                    value="cc@cc.com" required validate />
                                             </div>
                                         </div>
                                     </li>
@@ -93,23 +105,26 @@
                                             <div class="item-title item-label">Contraseña</div>
                                             <div class="item-input-wrap">
                                                 <input type="password" id="logcontrasena"
-                                                    placeholder="Ingrese su contraseña" value="123456" required validate />
+                                                    placeholder="Ingrese su contraseña" value="123456" required
+                                                    validate />
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div>
-                                <button class="col button button-fill button-round btn-login" id="ingboton">Iniciar Sesión</button>
+                                <button class="col button button-fill button-round btn-login" id="ingboton">Iniciar
+                                    Sesión</button>
                             </div>
                             <div class="login-p">
-                            <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
                             </div>
                             <div>
-                                <a href="/registro/"
-                                    class="col button button-fill button-round btn-login">Registrar</a>
+                                <a href="/registro/" class="col button button-fill button-round btn-login">Registrar</a>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -120,11 +135,8 @@
 
 
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-
-
 
 
 
@@ -144,11 +156,14 @@
 
 
     <script type="text/javascript" src="cordova.js"></script>
-    <!--<script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>-->
-    <script type="text/javascript" src="lib/framework7/framework7.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <!--<script type="text/javascript" src="lib/framework7/framework7.js"></script>-->
     <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
+    <script type="text/javascript" src="js/panel-propietario.js"></script>
+    
+
 </body>
 
 </html>

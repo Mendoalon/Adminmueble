@@ -4,11 +4,12 @@
 
 
 .fondo-backgroup {
-  height: 100vh;
+  
   background: url(../img/backgroup.jpg) no-repeat center;
-  background-size:  100vh 100% ;
+  background-size: 100vh 100%;
 }
-.nav{
+
+.nav {
   background-color: #35466B;
   color: var(--text-color);
 }
@@ -18,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   background: rgba(52, 70, 106, 0.902);
-  height: 600px;
+  height: 550px;
   box-shadow: 0px 10px 10px #192746e6;
 }
 
@@ -40,12 +41,18 @@
   font-weight: bold;
 }
 
-.list .item-input input{
+.list .item-input input {
   color: white;
   font-size: 1rem;
   font-weight: bold;
 }
 
+.list .item-input .imputImueble {
+  color: #6482A6;
+  
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 .btn-login {
   margin: 20px auto;
@@ -53,14 +60,38 @@
   background: var(--text-color);
 }
 
-.btn-login-fin{
+.btn-login-fin {
   margin: 0 auto;
   width: 60%;
   background: var(--text-color);
 }
-.login-p{
+
+.login-p {
   color: white;
   margin: 0 auto;
   font-weight: 500;
   font-size: small;
 }
+
+
+.panel {
+  min-width: 100px;
+  max-width: 90vw;
+}
+
+
+.herramientas{
+background-color: #35466B;
+}
+
+.traparesubnav{
+  opacity: .8;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.color-subnavbar{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+

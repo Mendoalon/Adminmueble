@@ -2,60 +2,68 @@
 var $$ = Dom7;
 
 var app = new Framework7({
-    // App root element
-    root: '#app',
-    // App Name
-    name: 'My App',
-    // App id
-    id: 'com.myapp.test',
-    // Enable swipe panel
-    panel: {
-      swipe: 'left',
-    },
-    // Add default routes
-    routes: [
-      { path: '/index/', url: 'index.html',},
-      { path: '/registro/', url: 'registro.html',}, 
-      { path: '/registro-datos/', url: 'registro-datos.html',},
-      { path: '/panel-admin/', url: 'panel-admin.html',}, 
-      { path: '/panel-propietario/', url: 'panel-propietario.html',},
-      { path: '/panel-inquilino/', url: 'panel-inquilino.html',},
-      { path: '/about/', url: 'about.html', },  
-    ]
+  // App root element
+  root: '#app',
+  // App Name
+  name: 'My App',
+  // App id
+  id: 'com.myapp.test',
+  // Enable swipe panel
+  panel: {
+    swipe: 'left',
+  },
+  // Add default routes
+  routes: [
+    { path: '/index/', url: 'index.html', },
+    { path: '/registro/', url: 'registro.html', },
+    { path: '/registro-datos/', url: 'registro-datos.html', },
+    { path: '/panel-admin/', url: 'panel-admin.html', },
+    { path: '/panel-propietario/', url: 'panel-propietario.html', },
+    { path: '/panel-inquilino/', url: 'panel-inquilino.html', },
+    { path: '/registro-inmuebles/', url: 'registro-inmuebles.html', },
+    { path: '/registro-inquilino/', url: 'registro-inquilino.html', },
+    { path: '/formulario-inmueble/', url: 'formulario-inmueble.html', },
+    { path: '/about/', url: 'about.html', },
+  ]
 
-    // ... other parameters
-  });
+  // ... other parameters
+});
 
 var mainView = app.views.create('.view-main');
 
 var db;
 var colUsuarios;
-var rol = 'propietario';
+var colInmuebles;
+
 
 
 // Handle Cordova Device Ready Event
-$$(document).on('deviceready', function() {
-      console.log("Device is ready!");
-      
-      db = firebase.firestore();
-      colUsuarios = db.collection('Usuarios');
-      //sembrado();
+$$(document).on('deviceready', function () {
+  console.log("Device is ready!!");
+
+  db = firebase.firestore();
+  colUsuarios = db.collection('Usuarios');
+  colInmuebles = db.collection('Usuarios');
+  
+  //sembrado();
 
 });
 
 
-//function sembrado(){
-  /* 
-  console.log('Iniciando el sembrado de datos');
-  var data ={nombre: 'Luis', apellido: 'Mendoza', rol:'admin'};
-  elId = 'luis.mendoza0321@gmail.com';
-  clave = 'admin1';
-  firebase.auth().createUserWithEmailAndPassword(elId, clave)
-  .then( function (){
 
-  colUsuarios.doc(elId).set(data)
-  .then(function(ok){ console.log('ok: ' + ok)})
-  .catch(function(error){console.log(error)})
+
+//function sembrado(){
+/* 
+console.log('Iniciando el sembrado de datos');
+var data ={nombre: 'Luis', apellido: 'Mendoza', rol:'admin'};
+elId = 'luis.mendoza0321@gmail.com';
+clave = 'admin1';
+firebase.auth().createUserWithEmailAndPassword(elId, clave)
+.then( function (){
+
+colUsuarios.doc(elId).set(data)
+.then(function(ok){ console.log('ok: ' + ok)})
+.catch(function(error){console.log(error)})
 
 })
 .catch(function(error){console.log(error)})
@@ -74,7 +82,7 @@ $$(document).on('deviceready', function() {
 //   .catch(function(error){
 //     console.log(error);
 //   })
-  
+
 
 //   console.log('fin del sembrado de datos');
 // };
@@ -83,9 +91,9 @@ $$(document).on('deviceready', function() {
 
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
-    // Do something here when page loaded and initialized
-    
-    // console.log(e);   
+  // Do something here when page loaded and initialized
+
+  // console.log(e);   
 
 });
 
