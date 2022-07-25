@@ -22,7 +22,7 @@ var app = new Framework7({
     { path: '/panel-inquilino/', url: 'panel-inquilino.html', },
     { path: '/registro-inmuebles/', url: 'registro-inmuebles.html', },
     { path: '/registro-inquilino/', url: 'registro-inquilino.html', },
-    { path: '/formulario-inmueble/', url: 'formulario-inmueble.html', },
+    { path: '/datos-propietario/', url: 'datos-propietario.html', },
     { path: '/about/', url: 'about.html', },
   ]
 
@@ -34,6 +34,7 @@ var mainView = app.views.create('.view-main');
 var db;
 var colUsuarios;
 var colInmuebles;
+var emailRol;
 
 
 
@@ -43,7 +44,6 @@ $$(document).on('deviceready', function () {
 
   db = firebase.firestore();
   colUsuarios = db.collection('Usuarios');
-  colInmuebles = db.collection('Usuarios');
   
   //sembrado();
 

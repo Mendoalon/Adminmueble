@@ -32,10 +32,13 @@ function fnLogin() {
           telefonoUsuario = doc.data().telefono;
 
           if (rolUsuario == "admin") {
+            emailRol = email;
             mainView.router.navigate('/panel-admin/');
           } else if (rolUsuario == "propietario") {
+            emailRol = email;
             mainView.router.navigate('/panel-propietario/');
           } else {
+            emailRol = email;
             mainView.router.navigate('/panel-inquilino/');
           }
 
@@ -65,4 +68,8 @@ function fnLogin() {
 
       $$('#logMensaje').html(`Hay un error: ${mensaje}`);
     });
+
+    
 }
+
+console.log(emailRol);

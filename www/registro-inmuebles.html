@@ -1,17 +1,15 @@
 <div class="fondo-backgroup page" data-name="registro-inmuebles">
     <div class="page-content">
 
+        <!-- boton para crear inmueble -->
+        <button  class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear Inmueble</button>
 
-        <button  class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear
-            Inmueble</button>
 
-        <div class="card card-outline">
-            <div class="card-header">Card header</div>
-            <div class="card-content card-content-padding">Card with header and footer. Card headers are used to display
-                card titles and footers for additional information or just for custom actions.</div>
-            <div class="card-footer">Card Footer</div>
-        </div>
 
+        <div id="listaInmuebles">
+
+          </div> 
+    
 
         <div class="fondo-backgroup popup popup-about">
             <div class="block">
@@ -24,10 +22,13 @@
                         <ul>
                             <li class="item-content item-input">
                                 <div class="item-inner">
-                                    <div class="item-title item-label">Tipo</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="text" id="tipoInmueble" placeholder="Ingrese Tipo" required
-                                            validate />
+                                    <div class="item-title item-label">Tipo Inmueble</div>
+                                    <div class="item-input-wrap nput-dropdown-wrap">
+                                        <select placeholder="Please choose..." id="tipoInmueble">
+                                            <option value="Casa">Casa</option>
+                                            <option value="Apartamento">Apartamento</option>
+                                            <option value="Habitacion">Habitación</option>
+                                          </select>
                                     </div>
                                 </div>
                             </li>
@@ -63,16 +64,6 @@
                                           </select>
                                     </div>
                                 </div>
-                            </li> 
-
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Email Propietario</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="email" id="emailPropie" placeholder="Ingrese Email Propietario"
-                                            required validate />
-                                    </div>
-                                </div>
                             </li>
 
                             <li class="item-content item-input">
@@ -85,7 +76,7 @@
                                 </div>
                             </li>
 
-                            
+
                         </ul>
 
                         <div class="row">

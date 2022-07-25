@@ -4,7 +4,7 @@
 
 
 .fondo-backgroup {
-  
+
   background: url(../img/backgroup.jpg) no-repeat center;
   background-size: 100vh 100%;
 }
@@ -49,7 +49,7 @@
 
 .list .item-input .imputImueble {
   color: #6482A6;
-  
+
   font-size: 1rem;
   font-weight: bold;
 }
@@ -95,3 +95,13 @@ background-color: #35466B;
   font-weight: bold;
 }
 
+ .card{
+  overflow: hidden;
+  
+  transition: all 400ms ease;
+}
+
+.card:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+} 

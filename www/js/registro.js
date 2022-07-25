@@ -2,6 +2,9 @@ $$(document).on('page:init', '.page[data-name="registro"]', function (e) {
   $$('#regboton').on('click', fnRegistrar)
 })
 
+
+
+
 function fnRegistrar() {
   password1 = $$('#regcontrasena').val();
   password2 = $$('#reg-conf-contrasena').val();
@@ -56,8 +59,8 @@ $$(document).on('page:init', '.page[data-name="registro-datos"]', function (e) {
 
 function fnRegistrofin() {
 
-  //identificador  
-  elId = email;
+
+ let elId = $$('#regemail').val();
 
   //recupero los datos del formulario.
   nombre = $$('#regNombreFin').val();
@@ -67,17 +70,18 @@ function fnRegistrofin() {
   direccion = $$('#regDireccionFin').val();
 
   //contrucion del json
-  var datos = {
+  var datosPropietario = {
     nombre: nombre,
     apellido: apellido,
     identificacion: identificacion,
     telefono: telefono,
     direccion: direccion,
-    rol: rolpropietario
+    rol: 'propietario'
   }
 
-  colUsuarios.doc(elId).set(datos)
-    .then(function (ok) { console.log('Registro de usuario ok:') 
+  colUsuarios.doc(elId).set(datosPropietario)
+    .then(function (ok) { console.log('Registro de usuario ok:')
+    emailRol = email; 
     mainView.router.navigate('/panel-propietario/')})
   
  .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
