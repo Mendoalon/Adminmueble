@@ -36,7 +36,7 @@ function crearInmueble() {
 
 //Funcion mostrar inmuebles
 function verInmuebles() {
-  Inmuebles = '';
+  let Inmuebles = '';
   //INICIO
   db.collection("Inmuebles").where('email_propietario', '==', emailRol ).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -147,15 +147,13 @@ function crearInquilino() {
 
 //Funcion mostrar inquilinos
 function verInquilinos() {
-  inquilino = '';
+  let inquilino = '';
   //INICIO
   db.collection("Usuarios").where('email_propie', '==', emailRol).get().then((querySnapshot) => {
 
     console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
 
-      
-      
        inquilino += `
           <div class="card">
           <div class="card-header"> <p><b> Tipo:</b> ${doc.data().nombreCompleto}</p></div>
@@ -171,12 +169,8 @@ function verInquilinos() {
           </div>
         </div>
           `;
-      
-      console.log(doc.data());
-      console.log(inquilino);
-
     })
-   // $$('#datosInquilino').html(inquilino);
+    $$('#datosInquilino').html(inquilino);
 
   })
 }
