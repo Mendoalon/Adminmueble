@@ -71,5 +71,3 @@ function fnLogin() {
 
     
 }
-
-console.log(emailRol);

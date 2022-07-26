@@ -1,10 +1,9 @@
-// Option 2. Using live 'page:init' event handlers for each page
+
 $$(document).on('page:init', '.page[data-name="registro-inmuebles"]', function (e) {
-  $$('#btncrearinmueble').on('click', crearInmueble)
-  $$('#mostrarinmuebles').on('click', verInmuebles)
-
+  $$('#btncrearinmueble').on('click', crearInmueble);
+  $$('#mostrarinmuebles').on('click', verInmuebles);
   $$('#emailPropie').val(emailRol);
-
+  $$('#btnverPorpietario').on('click', verPropietario);
 });
 
 
@@ -150,8 +149,6 @@ function verInquilinos() {
   let inquilino = '';
   //INICIO
   db.collection("Usuarios").where('email_propie', '==', emailRol).get().then((querySnapshot) => {
-
-    console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
 
        inquilino += `
@@ -173,4 +170,51 @@ function verInquilinos() {
     $$('#datosInquilino').html(inquilino);
 
   })
+}
+
+
+//Funcion para traer datos de propietario
+//Funcion para crear inquilinos
+$$(document).on('page:init', function (e) {
+  $$('#btnverPorpietario').on('click', verPropietario);
+
+});
+
+
+function verPropietario() {
+  let datosPropi = '';
+  //INICIO
+
+  var docRef = db.collection("Usuarios").doc(emailRol);
+
+docRef.get().then((doc) => {
+    if (doc.exists) {
+
+        datosPropi = `
+          <div class="card">
+          <div class="card-header"> <p><b> nombre:</b> ${doc.data().nombre}</p></div>
+          <div class="card-content card-content-padding text-align-center">
+          <p><b> identificacion:</b> ${doc.data().identificacion} </p>
+          <p><b> direccion:</b> ${doc.data().direccion} </p>
+          </div>
+          <div class="card-footer">
+          <p class="row">
+          <button class="col button button-small button-fill color-blue"> Editar </button>
+          <button class="col button button-small button-fill color-red"> Eliminar</button>          
+          </p>     
+          </div>
+        </div>
+          `;
+          $$('#datosPropietario').html(datosPropi);
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+
+    
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
 }
