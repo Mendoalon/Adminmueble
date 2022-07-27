@@ -34,21 +34,25 @@
 
     <div class="page-content">
 
-        <!-- boton para crear inmueble -->
+        <!-- boton para crear inquilino -->
         <button class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear
-            Inmueble</button>
+            Inquilino</button>
 
 
 
         <div id="datosInquilino"></div>
 
         <div class="fondo-backgroup popup popup-about">
-            <div class="block">
+            
                 <div class="card">
                     <div class="title-login">
                         <h2>Crear Inquilino</h2>
                     </div>
 
+                    <div class="mensaje" id="mensajeInquilino"></div>
+                 
+
+                <form id="formCreInquili">
                     <div class="list no-hairlines-md">
                         <ul>
                             <li class="item-content item-input">
@@ -56,7 +60,7 @@
                                     <div class="item-title item-label">Nombre Completo</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="text" id="nombreInquilino"
-                                            placeholder="Ingrese Nombre" required validate />
+                                            placeholder="Ingrese Nombre" required  />
                                     </div>
                                 </div>
                             </li>
@@ -67,7 +71,7 @@
                                     <div class="item-title item-label">Numero Identificacion</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="text" id="identiInquilino"
-                                            placeholder="Ingrese Direccion" required validate />
+                                            placeholder="Ingrese Direccion" required  />
                                     </div>
                                 </div>
                             </li>
@@ -79,7 +83,7 @@
                                     <div class="item-title item-label">Telefono</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="number" id="telefInquilino"
-                                            placeholder="Ingrese Telefono" required validate />
+                                            placeholder="Ingrese Telefono" required />
                                     </div>
                                 </div>
                             </li>
@@ -89,7 +93,7 @@
                                     <div class="item-title item-label">Email</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="email" id="emailInquilino"
-                                            placeholder="Ingrese Email" required validate />
+                                            placeholder="Ingrese Email" required validate/>
                                     </div>
                                 </div>
                             </li>
@@ -99,7 +103,7 @@
                                     <div class="item-title item-label">Asignar Contraseña</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="password" id="pwsInquilino"
-                                            placeholder="Ingrese Contraseña" required validate />
+                                            placeholder="Ingrese Contraseña" required/>
                                     </div>
                                 </div>
                             </li>
@@ -109,7 +113,7 @@
                                     <div class="item-title item-label">confirme Contraseña</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="password" id="pwsInquilino2"
-                                            placeholder="Ingrese Contraseña" required validate />
+                                            placeholder="Ingrese Contraseña" required  />
                                     </div>
                                 </div>
                             </li>
@@ -119,12 +123,11 @@
                         <div class="row">
                             <button class="col button button-fill button-round btn-login"
                                 id="btncrearinquilino">Crear</button>
-                            <button class="col button button-fill button-round btn-login popup-close">Cerrar</button>
+                            <button class="col button button-fill button-round btn-login popup-close" id="btnMensajeInquil">Cerrar</button>
                         </div>
                     </div>
-
+                </form>
                 </div>
-            </div>
         </div>
     </div>
 </div>

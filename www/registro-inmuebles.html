@@ -2,56 +2,57 @@
 
     <div class="traparesubnav appbar">
         <div class="appbar-inner">
-          <div class="left">
-            <a href="#" class="color-white button button-small panel-toggle display-flex" data-panel="left">
-              <i class="f7-icons">bars</i>
-            </a>
-          </div>
-          <div>
-            <h2 class="color-subnavbar">Adminmuebles</h2>
-          </div>
+            <div class="left">
+                <a href="#" class="color-white button button-small panel-toggle display-flex" data-panel="left">
+                    <i class="f7-icons">bars</i>
+                </a>
+            </div>
+            <div>
+                <h2 class="color-subnavbar">Adminmuebles</h2>
+            </div>
         </div>
-      </div>
-    
-      <!-- Rest of the app -->
-      <div class="panel panel-left panel-cover panel-init">
+    </div>
+
+    <!-- Rest of the app -->
+    <div class="panel panel-left panel-cover panel-init">
         <div class="block">
-          <strong>Panel Usuario</strong>
-          <div class="list links-list">
-            <ul>
-              <li><a href="/panel-propietario/" class="color-blue"><strong>Principal</strong><span
-                class="material-icons">home</span></a></li>
-              <li><a href="/datos-propietario/"  id="btnverPorpietario"><strong>Mi Perfil </strong><span
-                    class="material-icons">account_circle</span></a></li>
-              <li><a href="/registro-inquilino/" id="mostrarinquilino"><strong>Inquilinos </strong><span
-                    class="material-icons">people</span></a></li>
-              <li><a href="/registro-inmuebles/" id="mostrarinmuebles"><strong>Inmuebles </strong><span
-                    class="material-icons">business</span></a></li>
-            </ul>
-          </div>
+            <strong>Panel Usuario</strong>
+            <div class="list links-list">
+                <ul>
+                    <li><a href="/panel-propietario/" class="color-blue"><strong>Principal</strong><span
+                                class="material-icons">home</span></a></li>
+                    <li><a href="/datos-propietario/" id="btnverPorpietario"><strong>Mi Perfil </strong><span
+                                class="material-icons">account_circle</span></a></li>
+                    <li><a href="/registro-inquilino/" id="mostrarinquilino"><strong>Inquilinos </strong><span
+                                class="material-icons">people</span></a></li>
+                    <li><a href="/registro-inmuebles/" id="mostrarinmuebles"><strong>Inmuebles </strong><span
+                                class="material-icons">business</span></a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </div>
 
 
     <div class="page-content">
 
         <!-- boton para crear inmueble -->
-        <button  class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear Inmueble</button>
+        <button class="button button-fill button-round btn-login popup-open" data-popup=".popup-about">Crear
+            Inmueble</button>
 
 
 
-        <div id="listaInmuebles">
-
-          </div> 
-    
+        <div id="listaInmuebles"></div>
 
         <div class="fondo-backgroup popup popup-about">
-            <div class="block">
-                <div class="card">
-                    <div class="title-login">
-                        <h2>Crear Inmueble</h2>
-                    </div>
 
+            <div class="card">
+                <div class="title-login">
+                    <h2>Crear Inmueble</h2>
+                </div>
+
+                <div class="mensaje" id="msnInmueb"></div>
+
+                <form id="formCreInmueb">
                     <div class="list no-hairlines-md">
                         <ul>
                             <li class="item-content item-input">
@@ -62,7 +63,7 @@
                                             <option value="Casa">Casa</option>
                                             <option value="Apartamento">Apartamento</option>
                                             <option value="Habitacion">Habitación</option>
-                                          </select>
+                                        </select>
                                     </div>
                                 </div>
                             </li>
@@ -71,8 +72,8 @@
                                 <div class="item-inner">
                                     <div class="item-title item-label">Direccion</div>
                                     <div class="item-input-wrap">
-                                        <input class="imputImueble" type="text" id="dirInmueble" placeholder="Ingrese Direccion" required
-                                            validate />
+                                        <input class="imputImueble" type="text" id="dirInmueble"
+                                            placeholder="Ingrese Direccion" required validate />
                                     </div>
                                 </div>
                             </li>
@@ -81,8 +82,8 @@
                                 <div class="item-inner">
                                     <div class="item-title item-label">Matricula</div>
                                     <div class="item-input-wrap">
-                                        <input class="imputImueble" type="text" id="matriInmueble" placeholder="Ingrese matricula" required
-                                            validate />
+                                        <input class="imputImueble" type="text" id="matriInmueble"
+                                            placeholder="Ingrese matricula" required validate />
                                     </div>
                                 </div>
                             </li>
@@ -95,7 +96,7 @@
                                             <option value="Diponible">Diponible</option>
                                             <option value="Ocupada">Ocupada</option>
                                             <option value="Mantenimiento">Mantenimiento</option>
-                                          </select>
+                                        </select>
                                     </div>
                                 </div>
                             </li>
@@ -104,8 +105,8 @@
                                 <div class="item-inner">
                                     <div class="item-title item-label">Email Inquilino</div>
                                     <div class="item-input-wrap">
-                                        <input class="imputImueble" type="email" id="emailInqui" placeholder="Ingrese Email Inquilino"
-                                            required validate />
+                                        <input class="imputImueble" type="email" id="emailInqui"
+                                            placeholder="Ingrese Email Inquilino" required validate />
                                     </div>
                                 </div>
                             </li>
@@ -115,13 +116,13 @@
 
                         <div class="row">
                             <button class="col button button-fill button-round btn-login"
-                            id="btncrearinmueble">Crear</button>
-                            <button class="col button button-fill button-round btn-login popup-close">Cerrar</button>
+                                id="btncrearinmueble">Crear</button>
+                            <button class="col button button-fill button-round btn-login popup-close" id="btnMensajeInmueb">Cerrar</button>
                         </div>
                     </div>
-
-                </div>
+                </form>
             </div>
+
         </div>
 
     </div>

@@ -19,7 +19,7 @@ var app = new Framework7({
     { path: '/registro-datos/', url: 'registro-datos.html', },
     { path: '/panel-admin/', url: 'panel-admin.html', },
     { path: '/panel-propietario/', url: 'panel-propietario.html', },
-    { path: '/panel-inquilino/', url: 'panel-inquilino.html', },
+    { path: 'panel-inquilino/', url: 'panel-inquilino.html', },
     { path: '/registro-inmuebles/', url: 'registro-inmuebles.html', },
     { path: '/registro-inquilino/', url: 'registro-inquilino.html', },
     { path: '/datos-propietario/', url: 'datos-propietario.html', },
@@ -44,57 +44,8 @@ $$(document).on('deviceready', function () {
 
   db = firebase.firestore();
   colUsuarios = db.collection('Usuarios');
+  colInmuebles = db.collection('Inmuebles');
   
-  //sembrado();
-
-});
-
-
-
-
-//function sembrado(){
-/* 
-console.log('Iniciando el sembrado de datos');
-var data ={nombre: 'Luis', apellido: 'Mendoza', rol:'admin'};
-elId = 'luis.mendoza0321@gmail.com';
-clave = 'admin1';
-firebase.auth().createUserWithEmailAndPassword(elId, clave)
-.then( function (){
-
-colUsuarios.doc(elId).set(data)
-.then(function(ok){ console.log('ok: ' + ok)})
-.catch(function(error){console.log(error)})
-
-})
-.catch(function(error){console.log(error)})
-*/
-//}
-
-
-
-//   db.collection('persona').add(data)
-//   .then(function(datosPersona){
-
-//     console.log(`Los datos guardados ok ${datosPersona.id}`);
-//   })
-
-
-//   .catch(function(error){
-//     console.log(error);
-//   })
-
-
-//   console.log('fin del sembrado de datos');
-// };
-
-
-
-// Option 1. Using one 'page:init' handler for all pages
-$$(document).on('page:init', function (e) {
-  // Do something here when page loaded and initialized
-
-  // console.log(e);   
-
 });
 
 
