@@ -15,29 +15,30 @@
     </div>
 
     <!-- Rest of the app -->
-  <div class="panel panel-left panel-cover">
-    <div class="block">
-      <strong>Panel Propietario</strong>
-      <div class="list links-list">
-        <ul>
-          <li><a href="/panel-propietario/" class="color-blue"><strong>Principal</strong><span
-                class="material-icons">home</span></a></li>
-          <li><a href="/datos-propietario/" id="btnverPorpietario"><strong>Mi Perfil </strong><span
-                class="material-icons">account_circle</span></a></li>
-          <li><a href="/registro-inquilino/" id="mostrarinquilino"><strong>Inquilinos </strong><span
-                class="material-icons">people</span></a></li>
-          <li><a href="/registro-inmuebles/" id="mostrarinmuebles"><strong>Inmuebles </strong><span
-                class="material-icons">business</span></a></li>
-          <li><a href="/novedad/" id="btnmostrarnovedad"><strong>Novedades</strong><span class="material-icons">
-                notifications_active
-              </span></a></li>
-              <li><a href="/index/"><strong>Cerrar Sesión</strong><span class="material-icons">
-                close
-              </span></a></li>
-        </ul>
-      </div>
+    <div class="panel panel-left panel-cover">
+        <div class="block">
+            <strong>Panel Propietario</strong>
+            <div class="list links-list">
+                <ul>
+                    <li><a href="/panel-propietario/" class="color-blue"><strong>Principal</strong><span
+                                class="material-icons">home</span></a></li>
+                    <li><a href="/datos-propietario/" id="btnverPorpietario"><strong>Mi Perfil </strong><span
+                                class="material-icons">account_circle</span></a></li>
+                    <li><a href="/registro-inquilino/" id="mostrarinquilino"><strong>Inquilinos </strong><span
+                                class="material-icons">people</span></a></li>
+                    <li><a href="/registro-inmuebles/" id="mostrarinmuebles"><strong>Inmuebles </strong><span
+                                class="material-icons">business</span></a></li>
+                    <li><a href="/novedad/" id="btnmostrarnovedad"><strong>Novedades</strong><span
+                                class="material-icons">
+                                notifications_active
+                            </span></a></li>
+                    <li><a href="/index/"><strong>Cerrar Sesión</strong><span class="material-icons">
+                                close
+                            </span></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 
 
     <div class="page-content">
@@ -50,101 +51,117 @@
 
         <div id="datosInquilino"></div>
 
-        <div class="popup popup-about">
-            
-                <div class="card">
-                    <div class="title-login">
-                        <h2>Crear Inquilino</h2>
-                    </div>
+        <div class="poput-estilo popup popup-about">
 
-                    <div class="mensaje" id="mensajeInquilino"></div>
-                 
+            <div class="card">
+                <div class="title-login">
+                    <h2>Crear Inquilino</h2>
+                </div>
+
+                <div class="mensaje" id="mensajeInquilino"></div>
+
 
                 <form id="formCreInquili">
                     <div class="list no-hairlines-md">
                         <ul>
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Nombre Completo</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="text" id="nombreInquilino"
-                                            placeholder="Ingrese Nombre" required  />
+                            <div class="row">
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Nombre Completo</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="text" id="nombreInquilino"
+                                                placeholder="Ingrese Nombre" required validate/>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
 
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Numero Identificacion</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="text" id="identiInquilino"
-                                            placeholder="Ingrese Direccion" required  />
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Numero Identificacion</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="text" id="identiInquilino"
+                                                placeholder="Ingrese Direccion" required validate />
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Dirección</div>
-                                    <div class="item-input-wrap">
-                                        <input type="text" id="direccionInquilino" placeholder="Ingrese su dirección"
-                                             required validate/>
-                                        <span class="input-clear-button"></span>
+                                </li>
+                            </div>
+                            <div class="row">
+                                
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Dirección</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="text" id="direccionInquilino"
+                                                placeholder="Ingrese su dirección" required validate/>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Telefono</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="number" id="telefInquilino"
-                                            placeholder="Ingrese Telefono" required />
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Telefono</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="number" id="telefInquilino"
+                                                placeholder="Ingrese Telefono" required validate/>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
+                            </div>
 
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Email</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="email" id="emailInquilino"
-                                            placeholder="Ingrese Email" required validate/>
+                            <div class="row">
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Email</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="email" id="emailInquilino"
+                                                placeholder="Ingrese Email" required validate />
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Asignar Contraseña</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="password" id="pwsInquilino"
-                                            placeholder="Ingrese Contraseña" required/>
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Rol Asignado</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="text" value="Inquilino"
+                                                placeholder="Ingrese Contraseña" disabled required/>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-
-                            <li class="item-content item-input">
-                                <div class="item-inner">
-                                    <div class="item-title item-label">Confirme Contraseña</div>
-                                    <div class="item-input-wrap">
-                                        <input class="imputImueble" type="password" id="pwsInquilino2"
-                                            placeholder="Ingrese Contraseña" required  />
+                                </li>
+                            </div>
+                            <div class="row">
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Asignar Contraseña</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="password" id="pwsInquilino"
+                                                placeholder="Ingrese Contraseña" required validate/>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
+                                <li class="col item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Confirme Contraseña</div>
+                                        <div class="item-input-wrap">
+                                            <input class="imputImueble" type="password" id="pwsInquilino2"
+                                                placeholder="Ingrese Contraseña" required validate/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
                         </ul>
 
                         <div class="row">
                             <button class="col button button-fill button-round btn-login"
                                 id="btncrearinquilino">Crear</button>
-                            <button class="col button button-fill button-round btn-login popup-close" id="btnMensajeInquil">Cerrar</button>
+                            <button class="col button button-fill button-round btn-login popup-close"
+                                id="btnMensajeInquil">Cerrar</button>
                         </div>
                     </div>
                 </form>
-                </div>
+            </div>
         </div>
     </div>
 

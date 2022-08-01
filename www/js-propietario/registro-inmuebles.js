@@ -63,9 +63,8 @@ function verInmuebles(e) {
          <div class="card-footer">
          <p class="row">
          <button class="col button button-fill color-blue"> Editar </button>
-         <button class="col button button-fill color-red"> Eliminar </button>
+         <button id=${doc.id} class="col button button-fill color-red btnEli popup-open" href="#" data-popup=".popup-eliminar-inmueble"> Eliminar </button>
           <button  id=${doc.data().email_inquilino} class="col button button-fill color-gray btnNovedad popup-open" href="#" data-popup=".popup-novedad"> Novedad </button>
-          
         </p>       
              
          </div>
@@ -74,13 +73,28 @@ function verInmuebles(e) {
     })
     $$('#listaInmuebles').html(Inmuebles);
 
+
      $$('.btnNovedad').on('click', function () {
       
-      fnId(this.id, this.idd);
+      fnId(this.id);
  
-  })
+  });
+
+
+  $$('.btnEli').on('click', function () {
+      
+    fnIdImueble(this.id);
+
+});
 
 
 })
 
 }
+
+
+ 
+ 
+
+
+

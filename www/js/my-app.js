@@ -22,10 +22,11 @@ var app = new Framework7({
     { path: '/datos-propietario/', url: './page-propietario/datos-propietario.html', },
     { path: '/registro-inquilino/', url: './page-propietario/registro-inquilino.html', },
     { path: '/registro-inmuebles/', url: './page-propietario/registro-inmuebles.html', },
+    { path: '/novedad/', url: './page-propietario/novedad.html', },
     { path: '/panel-inquilino/', url: './page-inquilino/panel-inquilino.html', },
     { path: '/datos-inquilino/', url: './page-inquilino/datos-inquilino.html', },
     { path: '/inmuebles-inquilino/', url: './page-inquilino/inmuebles-inquilino.html', },
-    { path: '/novedad/', url: './page-propietario/novedad.html', },
+    { path: '/novedad-inquilino/', url: './page-inquilino/novedad-inquilino.html', },
     { path: '/about/', url: 'about.html', },
 
   ]

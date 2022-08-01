@@ -6,7 +6,7 @@
 .fondo-backgroup {
 
   background: url(../img/backgroup.jpg) no-repeat center;
-  background-size: 100vh 100%;
+  background-size: 100% 100%;
 }
 
 .nav {

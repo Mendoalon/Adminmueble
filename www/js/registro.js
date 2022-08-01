@@ -71,7 +71,7 @@ function fnRegistrofin() {
   identificacion = $$('#regIdentificacionFin').val();
   telefono = $$('#regTelefonoFin').val();
   direccion = $$('#regDireccionFin').val();
-
+if(!(nombres == '' || identificacion == '' || telefono == '' || direccion == '')){
   //contrucion del json
   var datosPropietario = {
     nombreCompleto: nombres,
@@ -81,13 +81,20 @@ function fnRegistrofin() {
     rol: 'propietario',
     estado: 'activo',
   }
-
+  //envio de datos a firestore
   colUsuarios.doc(elId).set(datosPropietario)
-    .then(function (ok) { console.log('Registro de usuario ok:')
-    emailRol = email; 
-    mainView.router.navigate('/panel-propietario/')})
+  .then(function (ok) { console.log('Registro de usuario ok:')
+  emailRol = email; 
+  mainView.router.navigate('/panel-propietario/')})
+
+.catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
+
+ }else{ 
+  $$('#regMensaje').html('Favor de llenar todos los campos');
+ }
   
- .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
+
+  
 }
 
 

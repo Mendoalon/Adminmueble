@@ -9,9 +9,7 @@ function msnNovedad(e) {
   e.preventDefault();
   document.getElementById('formCreNovedad').reset();
   $$('#msnnovedad').html(``);
-  
 }
-
 
 
 var EmailRecep;
@@ -66,8 +64,9 @@ db.collection('Novedades').where("EmailEmisor", "==", emailRol)
   querySnapshot.forEach((doc) => {
     novedades += `
        <div class="card">
-       <div class="card-header"> <p><b> Titulo: </b> ${doc.data().Titulo}</p></div>
+       <div class="card-header"> <p><b> Solicitante: </b> ${doc.data().Solicitante}</p></div>
        <div class="card-content-padding ">
+       <p><b> Titulo: </b> ${doc.data().Titulo}</p>
        <p><b> Descripción: </b> ${doc.data().Descripcion}</p>
        <p><b> Dirección: </b> ${doc.data().EmailEmisor} </p>
        <p><b> Estado: </b> ${doc.data().Estado} </p>
@@ -88,4 +87,26 @@ db.collection('Novedades').where("EmailEmisor", "==", emailRol)
 });
 
 }
+
+
+ //Funcion para eliminar inmueble
+ $$(document).on('page:init', function (e) {
+  e.preventDefault();
+  $$('#btneliminarInmueble').on('click', EliminarInmueble);
+  
+});
+
+var IdInmueble;
+function  fnIdImueble(id){
+   IdInmueble = id;
+}
+
+  function EliminarInmueble(event) {
+    event.preventDefault();
+   colInmuebles.doc(IdInmueble).delete().then(() => {
+    $$('#msnnovedad').html(`Inmueble eliminado correctamente`);
+   }).catch(() => {
+     console.log("Error removing document");
+   });
+} //FIN
 
