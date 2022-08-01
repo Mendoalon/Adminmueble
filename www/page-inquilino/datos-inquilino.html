@@ -1,0 +1,120 @@
+<div class="fondo-backgroup page" data-name="datos-inquilino">
+
+  <div class="traparesubnav appbar">
+    <div class="appbar-inner">
+      <div class="left">
+        <a href="#" class="color-white button button-small panel-toggle display-flex" data-panel="left">
+          <i class="f7-icons">bars</i>
+        </a>
+      </div>
+      <div>
+        <h2 class="color-subnavbar">Adminmuebles</h2>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Rest of the app -->
+  <div class="panel panel-left panel-cover">
+    <div class="block">
+      <strong>Panel Inquilino</strong>
+      <div class="list links-list">
+        <ul>
+          <li><a href="/panel-inquilino/" class="color-blue"><strong>Principal</strong><span
+                class="material-icons">home</span></a></li>
+          <li><a href="/datos-inquilino/" id="btnverInquilino"><strong>Mi Perfil </strong><span
+                class="material-icons">account_circle</span></a></li>
+          <li><a href="/inmuebles-inquilino/" id="inmueblesInquilino"><strong>Inmuebles </strong><span
+                class="material-icons">business</span></a></li>
+          <li><a href="/novedad/" id="btnmostrarnovedad"><strong>Novedades</strong><span class="material-icons">
+                notifications_active
+              </span></a></li>
+          <li><a href="/index/"><strong>Cerrar Sesión</strong><span class="material-icons">
+                close
+              </span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="page-content">
+
+
+    <div id="datosInquilino">
+
+    </div>
+
+
+
+  </div>
+
+  <!-- Modal actualiza datos Inquilino -->
+  <div class="page-content">
+    <div class="popup popup-editarInqui">
+      <div class="card">
+        <div class="title-login">
+          <h2>Editar Datos</h2>
+        </div>
+
+        <div class="mensaje" id="msnnovedad"></div>
+
+        <form id="formedicPropi">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Nombres</div>
+                  <div class="item-input-wrap">
+                    <input class="imputImueble" required validate type="text" id="nombreinqui" />
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">identificacion</div>
+                  <div class="item-input-wrap">
+                    <input class="imputImueble" type="text" id="identificacionInqui" required validate />
+                  </div>
+                </div>
+              </li>
+
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">identificacion</div>
+                  <div class="item-input-wrap">
+                    <input class="imputImueble" type="text" id="direccionInqui" required validate />
+                  </div>
+                </div>
+              </li>
+
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">telefono</div>
+                  <div class="item-input-wrap">
+                    <input class="imputImueble" type="text" id="telefonoInqui" required validate />
+                  </div>
+                </div>
+              </li>
+
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">correo</div>
+                  <div class="item-input-wrap">
+                    <input class="imputImueble" type="text" id="correoinqui" disabled />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="row">
+              <button class="col button button-fill button-round btn-login" id="btnactuInqui">Crear</button>
+              <button class="col button button-fill button-round btn-login popup-close"
+                id="btnMensajeActu">Cerrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

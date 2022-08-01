@@ -71,6 +71,8 @@
                                 <img src="img/img-login.png" />
                             </div>
 
+                            <div class="mensaje2" id="mensajelogin"></div>
+
                             <div class="list no-hairlines-md">
                                 <ul>
                                     <li class="item-content item-input">
@@ -79,7 +81,7 @@
                                             <div class="item-input-wrap">
                                                 <input type="email" id="logemail" placeholder="Ingrese su email"
                                                      required validate 
-                                                     value="jaime@jaime.com"/>
+                                                     />
                                             </div>
                                         </div>
                                     </li>
@@ -89,9 +91,10 @@
                                             <div class="item-title item-label">Contraseña</div>
                                             <div class="item-input-wrap">
                                                 <input type="password" id="logcontrasena"
-                                                    placeholder="Ingrese su contraseña" required
+                                                    placeholder="Ingrese su contraseña" 
+                                                      required
                                                     validate 
-                                                    value="123456"/>
+                                                    />
                                             </div>
                                         </div>
                                     </li>
@@ -105,13 +108,11 @@
                             <div class="login-p">
                                 <p>Si aun no tienes una cuenta por favor registrese aqui</p>
                             </div>
-                            <!-- <div>
-                                <a href="/registro/" class="col button button-fill button-round btn-login">Registrar</a>
-                            </div> -->
 
-                            <div>
-                                <a href="/panel-propietario/" class="col button button-fill button-round btn-login">panel</a>
-                            </div>
+                           <div>
+                                <a href="/registro/" class="col button button-fill button-round btn-login">Registrar</a>
+                            </div> 
+
 
                         </div>
                     </div>
@@ -148,13 +149,13 @@
     <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
-    <script type="text/javascript" src="js/panel-propietario.js"></script>
-    <script type="text/javascript" src="js/datos-propietario.js"></script>
-    <script type="text/javascript" src="js/registro-inquilino.js"></script>
-    <script type="text/javascript" src="js/verInquilino.js"></script>
-    <script type="text/javascript" src="js/registro-inmuebles.js"></script>
-    
-
+    <script type="text/javascript" src="js-propietario/panel-propietario.js"></script>
+    <script type="text/javascript" src="js-propietario/datos-propietario.js"></script>
+    <script type="text/javascript" src="js-propietario/registro-inquilino.js"></script>
+    <script type="text/javascript" src="js-propietario/registro-inmuebles.js"></script>
+    <script type="text/javascript" src="js-inquilino/datos-inquilino.js"></script>
+    <script type="text/javascript" src="js-inquilino/inmuebles-inquilino.js"></script>
+    <script type="text/javascript" src="js-propietario/novedad.js"></script>
 </body>
 
 </html>

@@ -18,12 +18,16 @@ var app = new Framework7({
     { path: '/registro/', url: 'registro.html', },
     { path: '/registro-datos/', url: 'registro-datos.html', },
     { path: '/panel-admin/', url: 'panel-admin.html', },
-    { path: '/panel-propietario/', url: 'panel-propietario.html', },
-    { path: 'panel-inquilino/', url: 'panel-inquilino.html', },
-    { path: '/registro-inmuebles/', url: 'registro-inmuebles.html', },
-    { path: '/registro-inquilino/', url: 'registro-inquilino.html', },
-    { path: '/datos-propietario/', url: 'datos-propietario.html', },
+    { path: '/panel-propietario/', url: './page-propietario/panel-propietario.html', },
+    { path: '/datos-propietario/', url: './page-propietario/datos-propietario.html', },
+    { path: '/registro-inquilino/', url: './page-propietario/registro-inquilino.html', },
+    { path: '/registro-inmuebles/', url: './page-propietario/registro-inmuebles.html', },
+    { path: '/panel-inquilino/', url: './page-inquilino/panel-inquilino.html', },
+    { path: '/datos-inquilino/', url: './page-inquilino/datos-inquilino.html', },
+    { path: '/inmuebles-inquilino/', url: './page-inquilino/inmuebles-inquilino.html', },
+    { path: '/novedad/', url: './page-propietario/novedad.html', },
     { path: '/about/', url: 'about.html', },
+
   ]
 
   // ... other parameters
@@ -34,7 +38,10 @@ var mainView = app.views.create('.view-main');
 var db;
 var colUsuarios;
 var colInmuebles;
+var colNovedades;
 var emailRol;
+var nombreUsuario;
+var idEstado
 
 
 
@@ -45,7 +52,12 @@ $$(document).on('deviceready', function () {
   db = firebase.firestore();
   colUsuarios = db.collection('Usuarios');
   colInmuebles = db.collection('Inmuebles');
+  colNovedades = db.collection('Novedades');
+
   
 });
+
+
+
 
 

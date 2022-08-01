@@ -15,21 +15,29 @@
     </div>
 
     <!-- Rest of the app -->
-    <div class="panel panel-left panel-cover panel-init">
-        <div class="block">
-            <strong>Panel Usuario</strong>
-            <div class="list links-list">
-                <ul>
-                    <li><a href="/datos-propietario/" class="color-blue"><strong>Mi Perfil </strong><span
-                                class="material-icons">account_circle</span></a></li>
-                    <li><a href="/registro-inquilino/" class="color-blue"><strong>Inquilinos </strong><span
-                                class="material-icons">people</span></a></li>
-                    <li><a href="/registro-inmuebles/" class="color-blue"><strong>Inmuebles </strong><span
-                                class="material-icons">business</span></a></li>
-                </ul>
-            </div>
-        </div>
+  <div class="panel panel-left panel-cover">
+    <div class="block">
+      <strong>Panel Propietario</strong>
+      <div class="list links-list">
+        <ul>
+          <li><a href="/panel-propietario/" class="color-blue"><strong>Principal</strong><span
+                class="material-icons">home</span></a></li>
+          <li><a href="/datos-propietario/" id="btnverPorpietario"><strong>Mi Perfil </strong><span
+                class="material-icons">account_circle</span></a></li>
+          <li><a href="/registro-inquilino/" id="mostrarinquilino"><strong>Inquilinos </strong><span
+                class="material-icons">people</span></a></li>
+          <li><a href="/registro-inmuebles/" id="mostrarinmuebles"><strong>Inmuebles </strong><span
+                class="material-icons">business</span></a></li>
+          <li><a href="/novedad/" id="btnmostrarnovedad"><strong>Novedades</strong><span class="material-icons">
+                notifications_active
+              </span></a></li>
+              <li><a href="/index/"><strong>Cerrar Sesión</strong><span class="material-icons">
+                close
+              </span></a></li>
+        </ul>
+      </div>
     </div>
+  </div>
 
 
     <div class="page-content">
@@ -42,7 +50,7 @@
 
         <div id="datosInquilino"></div>
 
-        <div class="fondo-backgroup popup popup-about">
+        <div class="popup popup-about">
             
                 <div class="card">
                     <div class="title-login">
@@ -76,7 +84,16 @@
                                 </div>
                             </li>
 
-
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Dirección</div>
+                                    <div class="item-input-wrap">
+                                        <input type="text" id="direccionInquilino" placeholder="Ingrese su dirección"
+                                             required validate/>
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
 
                             <li class="item-content item-input">
                                 <div class="item-inner">
@@ -110,7 +127,7 @@
 
                             <li class="item-content item-input">
                                 <div class="item-inner">
-                                    <div class="item-title item-label">confirme Contraseña</div>
+                                    <div class="item-title item-label">Confirme Contraseña</div>
                                     <div class="item-input-wrap">
                                         <input class="imputImueble" type="password" id="pwsInquilino2"
                                             placeholder="Ingrese Contraseña" required  />
@@ -130,4 +147,48 @@
                 </div>
         </div>
     </div>
+
+
+    <!-- Modal cambio estado inquilino -->
+    <div class="page-content">
+        <div class="popup popup-estado-inquilino">
+            <div class="card">
+                <div class="title-login">
+                    <h2>Cambiar estado Inquilino</h2>
+                </div>
+
+                <div class="mensaje" id="msnnovedad"></div>
+
+                <form id="formCambioEstInquilino">
+                    <div class="list no-hairlines-md">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Estado</div>
+                                    <div class="item-input-wrap nput-dropdown-wrap">
+                                        <select class="imputImueble" placeholder="Ingrese Estado" id="estadoInquilino"
+                                            required validate>
+                                            <option value="activo">Activo</option>
+                                            <option value="inactivo">inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="row">
+                            <button class="col button button-fill button-round btn-login"
+                                id="btnEstadoInquilino">Cambiar estado</button>
+                            <button id="btnmsnEstadiinqui"
+                                class="col button button-fill button-round btn-login popup-close">Cerrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
 </div>

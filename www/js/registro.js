@@ -1,8 +1,7 @@
-$$(document).on('page:init', '.page[data-name="registro"]', function (e) {
+//Funciion registrar en autenticacion propietario. 
+$$(document).on('page:init', function () {
   $$('#regboton').on('click', fnRegistrar)
-})
-
-
+});
 
 
 function fnRegistrar() {
@@ -11,14 +10,9 @@ function fnRegistrar() {
 
   if (password1 == password2) {
     password = password1
-    email = $$('#regemail').val();
-  } else {
-    console.log('La cotraseña no son iguales');
-  }
+     email = $$('#regemail').val();
 
- 
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
@@ -49,13 +43,23 @@ function fnRegistrar() {
       $$('#regMensaje').html(`Hay un error: ${mensaje}`);
 
     });
+
+  } else {
+
+    $$('#regMensaje').html(`Hay un error: Las contraseñas no coinciden`);
+  }
+
+ 
+
+  
 }
 
 
-$$(document).on('page:init', '.page[data-name="registro-datos"]', function (e) {
+//Funciion registrar propietario en firestore. 
+$$(document).on('page:init', function () {
   $$('#btnFinReg').on('click', fnRegistrofin);
-
 });
+
 
 function fnRegistrofin() {
 
@@ -63,20 +67,19 @@ function fnRegistrofin() {
  let elId = $$('#regemail').val();
 
   //recupero los datos del formulario.
-  nombre = $$('#regNombreFin').val();
-  apellido = $$('#regApellidoFin').val();
+  nombres = $$('#regNombreFin').val();
   identificacion = $$('#regIdentificacionFin').val();
   telefono = $$('#regTelefonoFin').val();
   direccion = $$('#regDireccionFin').val();
 
   //contrucion del json
   var datosPropietario = {
-    nombre: nombre,
-    apellido: apellido,
+    nombreCompleto: nombres,
     identificacion: identificacion,
     telefono: telefono,
     direccion: direccion,
-    rol: 'propietario'
+    rol: 'propietario',
+    estado: 'activo',
   }
 
   colUsuarios.doc(elId).set(datosPropietario)
@@ -85,7 +88,6 @@ function fnRegistrofin() {
     mainView.router.navigate('/panel-propietario/')})
   
  .catch(function (error) { console.log(`Error intentar registrar usuario: ${error}`) });
-
 }
 
 
